@@ -10,6 +10,6 @@ var schema = new Schema({
     messages: [{type: Schema.Types.ObjectId, ref: 'Message'}]
 });
 
-schema.plugin('mongooseUniqueValidator');
+schema.plugin(mongooseUniqueValidator);
 
 module.exports = mongoose.model('User', schema);

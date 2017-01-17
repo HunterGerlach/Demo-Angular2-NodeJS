@@ -1,15 +1,15 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
+var express      = require('express');
+var path         = require('path');
+var favicon      = require('serve-favicon');
+var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
+var bodyParser   = require('body-parser');
+var mongoose     = require('mongoose');
 
 var appRoutes = require('./routes/app');
 
 var app = express();
-mongoose.connect('172.31.0.2:27017/node-angular'); //mongod docker container
+mongoose.connect('localhost:27017/node-angular');//mongod docker container
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

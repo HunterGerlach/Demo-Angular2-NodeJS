@@ -1,5 +1,5 @@
 # Demo-Angular2-NodeJS
-This is derived from following @mschwarzmueller's Udemy course: Angular2 and NodeJS - The Practical Guide to the MEAN 
+This is derived from following [Maximilian Schwarzmüller's](https://github.com/mschwarzmueller) Udemy course: Angular2 and NodeJS - The Practical Guide to the MEAN 
 Stack 2.0
 
 https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/

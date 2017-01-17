@@ -2,6 +2,8 @@
 This is derived from following Max's Udemy course: Angular2 and NodeJS - The Practical Guide to the MEAN 
 Stack 2.0
 
+https://www.udemy.com/angular-2-and-nodejs-the-practical-guide/
+
 Instead of Installing MongoDB, Use Docker:
 ```
 # Run Mongo daemon

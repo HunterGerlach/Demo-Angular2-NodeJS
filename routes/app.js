@@ -3,7 +3,12 @@ var router  = express.Router();
 var User    = require('../models/user');
 
 router.get('/', function (req, res, next) {
-    res.render('node');
+    User.findOne({}, function(err, doc) {
+        if (err) {
+            return res.send('Error!');
+        }
+        res.render('node', {email: doc.email});
+    })
 });
 
 router.post('/', function(req, res, next) {
@@ -15,16 +20,7 @@ router.post('/', function(req, res, next) {
         email: email
     });
     console.log("nothing yet");
-    user.save(function(err, result) {
-        if(err) {
-            console.log("error: ");
-            console.log(err);
-            res.send(400, 'Bad Request');
-        } else {
-            console.log("Success!");
-            console.log(result);
-        }
-    });
+    user.save();
     res.redirect('/');
 })
 

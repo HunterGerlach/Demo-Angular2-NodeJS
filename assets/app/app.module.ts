@@ -19,6 +19,8 @@ import { HeaderComponent } from "./header.component";
 
 import { routing } from "./app.routing";
 
+import { ErrorComponent } from "./errors/error.component";
+
 
 @NgModule({
     declarations: [
@@ -31,7 +33,8 @@ import { routing } from "./app.routing";
         HeaderComponent,
         LogoutComponent,
         SignupComponent,
-        SigninComponent
+        SigninComponent, 
+        ErrorComponent
     ],
     imports: [
         BrowserModule, 

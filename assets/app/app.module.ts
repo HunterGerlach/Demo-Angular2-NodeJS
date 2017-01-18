@@ -9,6 +9,7 @@ import { MessageListComponent }  from "./messages/message-list.component";
 import { MessageInputComponent } from "./messages/message-input.component";
 import { MessagesComponent }     from "./messages/messages.component";
 
+import { AuthService }             from "./auth/auth.service";
 import { AuthenticationComponent } from "./auth/authentication.component";
 import { LogoutComponent }         from "./auth/logout.component";
 import { SigninComponent }         from "./auth/signin.component";
@@ -39,6 +40,7 @@ import { routing } from "./app.routing";
         routing, 
         ReactiveFormsModule
     ],
+    providers: [AuthService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

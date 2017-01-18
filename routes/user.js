@@ -6,10 +6,10 @@ var User = require('../models/user');
 
 router.post('/', function (req, res, next) {
     var user = new User({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
+        email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
-        email: req.body.email
+        firstName: req.body.firstName,
+        lastName: req.body.lastName
     });
     user.save(function(err, result) {
         if (err) {

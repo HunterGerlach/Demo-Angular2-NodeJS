@@ -20,6 +20,7 @@ import { HeaderComponent } from "./header.component";
 import { routing } from "./app.routing";
 
 import { ErrorComponent } from "./errors/error.component";
+import { ErrorService }   from "./errors/error.service";
 
 
 @NgModule({
@@ -43,7 +44,10 @@ import { ErrorComponent } from "./errors/error.component";
         routing, 
         ReactiveFormsModule
     ],
-    providers: [AuthService],
+    providers: [
+        AuthService,
+        ErrorService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

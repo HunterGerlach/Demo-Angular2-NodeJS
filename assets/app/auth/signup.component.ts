@@ -10,7 +10,7 @@ export class SignupComponent implements OnInit {
     myForm: FormGroup;
 
     onSubmit() {
-        console.log(this.myForm);
+        console.log({pristine: this.myForm.pristine, email: this.myForm.value.email});
         this.myForm.reset();
     }
 
@@ -20,7 +20,6 @@ export class SignupComponent implements OnInit {
             lastName: new FormControl(null, Validators.required),
             email: new FormControl(null, [
                 Validators.required
-                //Validators.pattern("")
             ]),
             password: new FormControl(null, Validators.required)
         });
